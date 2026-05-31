@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devika Burkhe - UI/UX Designer Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="hero.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-[#2c030d] bg-white overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="bg-[#7b0d26] py-4 fixed w-full top-0 z-[1000] transition-all duration-300" id="navbar">
+        <div class="max-w-[1200px] mx-auto px-8 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 text-white font-bold text-2xl no-underline">
+                <div class="w-9 h-9 bg-[#a63b54] rounded-full flex items-center justify-center text-white font-extrabold">D</div>
+                Devika
+            </a>
+            <ul class="hidden md:flex gap-8 list-none nav-links">
+                <li><a href="#home" class="text-white/85 no-underline text-sm font-medium transition-colors hover:text-[#f1b8c7] active">Home</a></li>
+                <li><a href="#services" class="text-white/85 no-underline text-sm font-medium transition-colors hover:text-[#f1b8c7]">Skills</a></li>
+                <li><a href="#projects" class="text-white/85 no-underline text-sm font-medium transition-colors hover:text-[#f1b8c7]">Projects</a></li>
+                <li><a href="#about" class="text-white/85 no-underline text-sm font-medium transition-colors hover:text-[#f1b8c7]">About</a></li>
+            </ul>
+            <div class="flex items-center gap-4">
+                <button onclick="toggleTheme()" class="text-white text-xl p-2 hover:bg-white/10 rounded-full transition-colors" title="Toggle Theme">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+                <a href="#contact" class="hidden sm:inline-block bg-white text-[#7b0d26] px-6 py-2.5 rounded-full no-underline font-semibold text-sm transition-all border-2 border-white hover:bg-transparent hover:text-white nav-contact-btn">Contact Me</a>
+                <div class="md:hidden text-white text-2xl cursor-pointer" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-white to-[#f1f1f1] pt-32 pb-16 relative overflow-hidden" id="home">
+        <div class="max-w-[1200px] mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="fade-in">
+                <div class="inline-block border border-[#2c030d] px-4 py-1.5 rounded text-sm font-semibold mb-6 relative before:content-[''] before:absolute before:w-1.5 before:h-1.5 before:bg-[#a63b54] before:rounded-full before:-top-[3px] before:-left-[3px] after:content-[''] after:absolute after:w-1.5 after:h-1.5 after:bg-[#a63b54] after:rounded-full after:-bottom-[3px] after:-right-[3px] hello-box">Hello There!</div>
+                <h1 class="text-4xl md:text-[3.2rem] font-extrabold leading-[1.2] mb-6 text-[#2c030d]">
+                    I'm <span class="text-[#7b0d26] relative inline-block after:content-[''] after:absolute after:bottom-1 after:left-0 after:w-full after:h-2 after:bg-[#a63b54]/40 after:-z-10 hero-name">Devika Bhurke</span>,<br>
+                    UI/UX Designer.<br>
+                </h1>
+                <p class="text-[#5e2736] text-base leading-relaxed mb-8 max-w-[90%]">
+                    I'm currently a UI/UX Design student at MIT School of Design, passionate about creating simple and meaningful digital experiences. I enjoy turning ideas into clean, user-friendly interfaces while continuously learning and exploring new design approaches. I like working on real-world problems and using design thinking to find effective solutions. My goal is to grow into a designer who creates intuitive and impactful digital products.
+                </p>
+            </div>
+            <div class="relative flex justify-center items-center fade-in">
+                <div class="absolute w-[300px] h-[300px] md:w-[380px] md:h-[380px] bg-[#f1b8c7] rounded-full z-0 hero-bg-circle"></div>
+                <img src="./hero.jpeg" alt="Devika Bhurke" class="relative z-10 w-[300px] md:w-[350px] h-[400px] md:h-[500px] rounded-[250px] object-cover shadow-2xl">
+                <div class="absolute z-20 bg-white px-5 py-2.5 rounded-full shadow-lg font-semibold text-sm flex items-center gap-2 animate-[float_3s_ease-in-out_infinite] top-10 right-0 md:-right-4 dark-badge">
+                    <i class="fas fa-pen-nib text-[#7b0d26]"></i> <span>UI/UX Designer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-bg py-5 overflow-hidden relative -my-2.5 z-10">
+        <div class="flex animate-[marquee_20s_linear_infinite] whitespace-nowrap">
+            <div class="flex items-center gap-8 px-8 font-bold text-lg marquee-text">App Design <i class="fas fa-star marquee-icon text-xl"></i></div>
+            <div class="flex items-center gap-8 px-8 font-bold text-lg marquee-text">Website Design <i class="fas fa-star marquee-icon text-xl"></i></div>
+            <div class="flex items-center gap-8 px-8 font-bold text-lg marquee-text">Dashboard <i class="fas fa-star marquee-icon text-xl"></i></div>
+            <div class="flex items-center gap-8 px-8 font-bold text-lg marquee-text">Wireframe <i class="fas fa-star marquee-icon text-xl"></i></div>
+            <div class="flex items-center gap-8 px-8 font-bold text-lg marquee-text">Prototype <i class="fas fa-star marquee-icon text-xl"></i></div>
+            <div class="flex items-center gap-8 px-8 font-bold text-lg marquee-text">User Research <i class="fas fa-star marquee-icon text-xl"></i></div>
+            <!-- Duplicate for seamless scroll -->
+            <div class="flex items-center gap-8 px-8 font-bold text-lg marquee-text">App Design <i class="fas fa-star marquee-icon text-xl"></i></div>
+            <div class="flex items-center gap-8 px-8 font-bold text-lg marquee-text">Website Design <i class="fas fa-star marquee-icon text-xl"></i></div>
+            <div class="flex items-center gap-8 px-8 font-bold text-lg marquee-text">Dashboard <i class="fas fa-star marquee-icon text-xl"></i></div>
+            <div class="flex items-center gap-8 px-8 font-bold text-lg marquee-text">Wireframe <i class="fas fa-star marquee-icon text-xl"></i></div>
+            <div class="flex items-center gap-8 px-8 font-bold text-lg marquee-text">Prototype <i class="fas fa-star marquee-icon text-xl"></i></div>
+            <div class="flex items-center gap-8 px-8 font-bold text-lg marquee-text">User Research <i class="fas fa-star marquee-icon text-xl"></i></div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="py-24 bg-white" id="services">
+        <div class="max-w-[1200px] mx-auto px-8">
+            <div class="flex justify-between items-end mb-12 flex-wrap gap-4 fade-in">
+                <div>
+                    <div class="flex items-center gap-2 text-sm font-semibold text-[#5e2736] mb-2 before:content-[''] before:w-5 before:h-0.5 before:bg-[#a63b54]">Career</div>
+                    <h2 class="text-4xl font-bold"> <span class="text-[#7b0d26] font-['Playfair_Display'] italic font-semibold">Skills</span></h2>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- UI/UX Design -->
+                <div class="bg-[#f1f1f1] rounded-[20px] p-10 transition-all duration-300 border border-transparent hover:-translate-y-1.5 hover:shadow-xl hover:border-[#f1b8c7] fade-in group">
+                    <div class="w-[60px] h-[60px] bg-white rounded-2xl flex items-center justify-center mb-6 text-2xl text-[#7b0d26] shadow-sm">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">UI/UX Design</h3>
+                    <p class="text-[#5e2736] text-[0.95rem] leading-relaxed">Creating intuitive and engaging user interfaces that deliver exceptional user experiences across all platforms and devices.</p>
+                </div>
+                <!-- Application Design -->
+                <div class="bg-[#f1f1f1] rounded-[20px] p-10 transition-all duration-300 border border-transparent hover:-translate-y-1.5 hover:shadow-xl hover:border-[#f1b8c7] fade-in group">
+                    <div class="w-[60px] h-[60px] bg-white rounded-2xl flex items-center justify-center mb-6 text-2xl text-[#7b0d26] shadow-sm">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Application Design</h3>
+                    <p class="text-[#5e2736] text-[0.95rem] leading-relaxed">Designing beautiful and functional mobile applications that users love, from concept to final pixel-perfect delivery.</p>
+                </div>
+                <!-- Website Design -->
+                <div class="bg-[#f1f1f1] rounded-[20px] p-10 transition-all duration-300 border border-transparent hover:-translate-y-1.5 hover:shadow-xl hover:border-[#f1b8c7] fade-in group">
+                    <div class="w-[60px] h-[60px] bg-white rounded-2xl flex items-center justify-center mb-6 text-2xl text-[#7b0d26] shadow-sm">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Website Design</h3>
+                    <p class="text-[#5e2736] text-[0.95rem] leading-relaxed">Building responsive and modern websites that capture your brand essence and convert visitors into customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-24 bg-white" id="projects">
+        <div class="max-w-[1200px] mx-auto px-8">
+            <div class="text-center mb-16 fade-in">
+                <div class="flex items-center justify-center gap-2 text-sm font-semibold text-[#5e2736] mb-2 before:content-[''] before:w-5 before:h-0.5 before:bg-[#a63b54] after:content-[''] after:w-5 after:h-0.5 after:bg-[#a63b54]">SELECTED WORK</div>
+                <h2 class="text-4xl font-bold text-[#2c030d]">My Projects</h2>
+            </div>
+            <div id="projects-grid" class="flex flex-wrap justify-center gap-8">
+                <!-- Projects will be populated by script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="bg-[#7b0d26] py-24 text-white relative overflow-hidden" id="about">
+        <div class="max-w-[1200px] mx-auto px-8 grid grid-cols-1 md:md:grid-cols-2 gap-16 items-center">
+            <div class="relative flex justify-center fade-in">
+                <div class="w-[280px] h-[280px] md:w-[350px] md:h-[350px] bg-[#f1b8c7] rounded-full absolute"></div>
+                <img src="hero.jpeg" alt="About Devika" class="w-[280px] h-[280px] md:w-[350px] md:h-[350px] rounded-full object-cover relative z-10">
+                <!-- Skill Tags Overlay -->
+                <span class="absolute z-20 bg-[#a63b54] text-white px-3 py-1.5 rounded-full text-[0.75rem] font-semibold shadow-lg bottom-[20%] left-[10%]">UI/UX Design</span>
+                <span class="absolute z-20 bg-[#c7d9b7] text-[#2c030d] px-3 py-1.5 rounded-full text-[0.75rem] font-semibold shadow-lg top-[30%] left-[5%]">Mobile App Design</span>
+                <span class="absolute z-20 border-2 border-white bg-transparent text-white px-3 py-1.5 rounded-full text-[0.75rem] font-semibold shadow-lg bottom-[35%] left-0">Design System</span>
+                <span class="absolute z-20 bg-[#a63b54] text-white px-3 py-1.5 rounded-full text-[0.75rem] font-semibold shadow-lg top-[50%] right-[5%]">Website Design</span>
+                <span class="absolute z-20 bg-[#c7d9b7] text-[#2c030d] px-3 py-1.5 rounded-full text-[0.75rem] font-semibold shadow-lg bottom-[15%] right-[10%]">Prototype</span>
+                <span class="absolute z-20 bg-[#a63b54] text-white px-3 py-1.5 rounded-full text-[0.75rem] font-semibold shadow-lg top-[20%] right-[15%]">Wireframe Design</span>
+            </div>
+            <div class="fade-in">
+                <div class="flex items-center gap-2 text-sm font-semibold text-white/80 mb-2 before:content-[''] before:w-5 before:h-0.5 before:bg-[#a63b54]">About Me</div>
+                <h2 class="text-4xl font-bold mb-4">Who is <span class="text-[#f1b8c7] font-['Playfair_Display'] italic">Devika Bhurke</span>?</h2>
+                <p class="text-white/85 leading-relaxed mb-8">
+                    A passionate UI/UX design student with a keen eye for detail and a drive to create 
+                    meaningful digital experiences. I specialize in transforming complex problems into 
+                    simple, beautiful, and intuitive design solutions through user-centered design thinking.
+                </p>
+                <div class="flex gap-10 mb-8 flex-wrap">
+                    <div>
+                        <h3 class="text-3xl font-extrabold text-[#f1b8c7]">6+</h3>
+                        <p class="text-[0.85rem] text-white/70">Projects Completed</p>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-extrabold text-[#f1b8c7]">5+</h3>
+                        <p class="text-[0.85rem] text-white/70">Design Tools Mastered</p>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-extrabold text-[#f1b8c7]">2+</h3>
+                        <p class="text-[0.85rem] text-white/70">Years of Learning</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="py-24 bg-white text-center" id="tools">
+        <div class="max-w-[1200px] mx-auto px-8">
+            <div class="flex items-center justify-center gap-2 text-sm font-semibold text-[#5e2736] mb-2 before:content-[''] before:w-5 before:h-0.5 before:bg-[#a63b54] after:content-[''] after:w-5 after:h-0.5 after:bg-[#a63b54]">My Favorite Tools</div>
+            <h2 class="text-4xl font-bold mb-12">
+                <span class="text-[#7b0d26] font-['Playfair_Display'] italic font-semibold">Exploring the Tools</span><br>
+                Behind My Designs
+            </h2>
+            <div class="flex justify-center gap-8 flex-wrap">
+                <div class="w-20 h-20 bg-[#f1f1f1] rounded-[20px] flex items-center justify-center text-3xl text-[#7b0d26] transition-all border-2 border-transparent hover:-translate-y-1 hover:border-[#a63b54] hover:shadow-lg"><i class="fab fa-figma"></i></div>
+                <div class="w-20 h-20 bg-[#f1f1f1] rounded-[20px] flex items-center justify-center text-3xl text-[#7b0d26] transition-all border-2 border-transparent hover:-translate-y-1 hover:border-[#a63b54] hover:shadow-lg"><img src="logo.png" class="h-5"/></div>
+                <div class="w-20 h-20 bg-[#f1f1f1] rounded-[20px] flex items-center justify-center text-3xl text-[#7b0d26] transition-all border-2 border-transparent hover:-translate-y-1 hover:border-[#a63b54] hover:shadow-lg"><i class="fab fa-invision"></i></div>
+                <div class="w-20 h-20 bg-[#f1f1f1] rounded-[20px] flex items-center justify-center text-3xl text-[#7b0d26] transition-all border-2 border-transparent hover:-translate-y-1 hover:border-[#a63b54] hover:shadow-lg"><i class="fab fa-dribbble"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-24 bg-[#f1f1f1]" id="contact">
+        <div class="max-w-[1200px] mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center fade-in">
+                <div class="text-left md:text-left">
+                    <div class="flex items-center gap-2 text-sm font-semibold text-[#5e2736] mb-2 before:content-[''] before:w-5 before:h-0.5 before:bg-[#a63b54]">Get in Touch</div>
+                    <h2 class="text-4xl font-bold mb-6">Let's Work <span class="text-[#7b0d26] font-['Playfair_Display'] italic font-semibold">Together</span></h2>
+                    <p class="text-[#5e2736] leading-relaxed mb-8">Have a project in mind? Feel free to reach out. I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+                    <div class="flex flex-col gap-6">
+                        <div class="flex items-center gap-4 text-[#2c030d] font-semibold">
+                            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#7b0d26] shadow-sm"><i class="fas fa-envelope"></i></div>
+                            <span>bhurkedevika20@gmail.com</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-[#2c030d] font-semibold">
+                            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#7b0d26] shadow-sm"><i class="fas fa-location-dot"></i></div>
+                            <span>MIT School of Design, Pune</span>
+                        </div>
+                    </div>
+                </div>
+                <form action="contact.php" method="POST" id="contactForm" class="bg-white p-8 md:p-12 rounded-[20px] shadow-sm">
+                    <div class="mb-6">
+                        <input type="text" name="name" id="name" placeholder="Your Name" required class="w-full px-6 py-4 border border-[#f1f1f1] rounded-xl focus:outline-none focus:border-[#a63b54] focus:ring-4 focus:ring-[#a63b54]/10 transition-all">
+                    </div>
+                    <div class="mb-6">
+                        <input type="email" name="email" id="email" placeholder="Your Email" required class="w-full px-6 py-4 border border-[#f1f1f1] rounded-xl focus:outline-none focus:border-[#a63b54] focus:ring-4 focus:ring-[#a63b54]/10 transition-all">
+                    </div>
+                    <div class="mb-6">
+                        <textarea name="message" id="message" placeholder="Your Message" rows="5" required class="w-full px-6 py-4 border border-[#f1f1f1] rounded-xl focus:outline-none focus:border-[#a63b54] focus:ring-4 focus:ring-[#a63b54]/10 transition-all"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-[#7b0d26] text-white px-8 py-4 rounded-full font-bold text-base transition-all hover:bg-[#7b0d26]/90 hover:-translate-y-0.5 hover:shadow-xl flex items-center justify-center gap-2">
+                        Send Message <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SMS Simulation Notification -->
+    <div id="smsNotification" class="fixed bottom-10 right-10 bg-green-500 text-white px-6 py-4 rounded-2xl shadow-2xl transform translate-y-20 opacity-0 transition-all duration-500 z-[2000] flex items-center gap-3">
+        <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+            <i class="fas fa-comment-sms"></i>
+        </div>
+        <div>
+            <p class="font-bold text-sm uppercase tracking-wider">SMS Simulated</p>
+            <p class="text-xs opacity-90">Message sent to +91 98XXX XXXXX</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#6b0230] py-12 text-white text-center">
+        <div class="max-w-[1200px] mx-auto px-8">
+            <p class="opacity-70 text-sm">&copy; 2026 Devika Bhurke. All rights reserved. Designed with passion.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+@layer utilities {
+    .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease;
+    }
+    .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Dark Mode Support */
+.dark {
+    color-scheme: dark;
+}
+.dark body {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+/* Backgrounds */
+.dark #home, 
+.dark .bg-gradient-to-br.from-white.to-\[\#fbf8f8\],
+.dark #contact, 
+.dark .bg-\[\#fbf8f8\] {
+    background-color: #121212 !important;
+    background-image: none !important;
+}
+
+/* Navbar Background */
+.dark nav.bg-\[\#7b0d26\] {
+    background-color: #ff7cb4 !important;
+    border-bottom: 1px solid #ff7cb4 !important;
+}
+
+/* Global Text Contrast Overrides */
+.dark h1, .dark h2, .dark h3, .dark span, .dark p, .dark li a {
+    color: #e5e5e5 !important;
+}
+
+/* Consistent Dark Mode Primary Color: #f4b4c4 (Glowing Pink) */
+
+/* Text colors */
+.dark .text-\[\#901133\],
+.dark .text-\[\#c85a71\],
+.dark .text-\[\#f4b4c4\] {
+    color: #ff7cb4 !important;
+}
+.dark .text-\[\#3b0718\] {
+    color: #ffffff !important;
+}
+
+/* Background colors (Tags, Badges, etc) */
+.dark .bg-\[\#c85a71\] {
+    background-color: #ff7cb4 !important;
+    color: #121212 !important;
+}
+.dark .bg-\[\#c7d9b7\] {
+    background-color: #2a2a2a !important;
+    color: #ff7cb4 !important;
+    border: 1px solid #ff7cb4 !important;
+}
+
+/* Pseudo elements (Dots, Lines) */
+.dark .before\:bg-\[\#c85a71\]::before,
+.dark .after\:bg-\[\#c85a71\]::after {
+    background-color: #ff7cb4 !important;
+}
+
+/* Borders */
+.dark .border-\[\#c85a71\] {
+    border-color: #ff7cb4 !important;
+}
+.dark .hover\:border-\[\#c85a71\]:hover {
+    border-color: #ff7cb4 !important;
+}
+
+/* Specific Button Fixes */
+.dark .bg-white.text-\[\#901133\] {
+    background-color: #ff7cb4 !important;
+    color: #121212 !important;
+    border-color: #ff7cb4 !important;
+}
+
+/* Card & Form Backgrounds */
+.dark .bg-white:not(nav *), 
+.dark form.bg-white {
+    background-color: #1e1e1e !important;
+    border: 1px solid #2a2a2a !important;
+}
+
+/* Contact Info Icons */
+.dark .bg-white.rounded-full {
+    background-color: #2a2a2a !important;
+    color: #ff7cb4 !important;
+}
+
+/* Inputs */
+.dark input, .dark textarea {
+    background-color: #2a2a2a !important;
+    border-color: #3f3f46 !important;
+    color: #ffffff !important;
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.2) !important;
+}
+.dark input:focus, .dark textarea:focus {
+    border-color: #ff7cb4 !important;
+    box-shadow: 0 0 0 4px rgba(255, 124, 180, 0.1), inset 0 2px 4px 0 rgba(0, 0, 0, 0.2) !important;
+}
+.dark input::placeholder, .dark textarea::placeholder {
+    color: #71717a !important;
+}
+
+/* Tools Section Dark Mode */
+.dark #tools div.text-\[\#5e2736\] {
+    color: #ff7cb4 !important; /* "My Favorite Tools" label */
+}
+.dark #tools .before\:bg-\[\#a63b54\]::before,
+.dark #tools .after\:bg-\[\#a63b54\]::after {
+    background-color: #ff7cb4 !important; /* Lines around label */
+}
+.dark #tools .text-\[\#7b0d26\] {
+    color: #ff7cb4 !important; /* Icons inside boxes */
+}
+.dark #tools .hover\:border-\[\#a63b54\]:hover {
+    border-color: #ff7cb4 !important; /* Box hover border */
+    box-shadow: 0 10px 15px -3px rgba(255, 124, 180, 0.2), 0 4px 6px -4px rgba(255, 124, 180, 0.1) !important; /* Subtle neon pink shadow */
+}
+
+/* Marquee Light & Dark Mode Contrast Fixes */
+.marquee-bg {
+    background-color: #f1b8c7; /* Light pink background */
+}
+.marquee-text {
+    color: #2c030d; /* High contrast dark text for light pink bg */
+}
+.marquee-icon {
+    color: #a63b54;
+}
+
+.dark .marquee-bg {
+    background-color: #ff7cb4 !important; /* Bright pink background for dark mode */
+}
+.dark .marquee-text {
+    color: #121212 !important; /* High contrast text on bright pink */
+}
+.dark .marquee-icon {
+    color: #1e1e1e !important;
+}
+
+/* Project Cards Dark Mode */
+.dark .project-card {
+    background-color: #1e1e1e !important;
+    border-color: #2a2a2a !important;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4) !important;
+}
+.dark .project-card:hover {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6) !important;
+}
+.dark .project-card h3 {
+    color: #ffffff !important;
+}
+.dark .project-card p {
+    color: #a1a1aa !important;
+}
+.dark .project-card .project-index {
+    color: #2a2a2a !important;
+}
+
+/* --- Missing Light-to-Dark Color Overrides --- */
+
+/* Footer Background (#6b0230) */
+.dark .bg-\[\#6b0230\] {
+    background-color: #0a0a0a !important;
+    border-top: 1px solid #2a2a2a !important;
+}
+
+/* Sub-text (#753c4d) that isn't a p or span element */
+.dark .text-\[\#753c4d\] {
+    color: #a1a1aa !important;
+}
+
+/* (Removed old Hello There Badge Border rule) */
+
+/* Hover States (Text & Border for #f4b4c4) */
+.dark .hover\:text-\[\#f4b4c4\]:hover {
+    color: #ff7cb4 !important;
+}
+.dark .hover\:border-\[\#f4b4c4\]:hover {
+    border-color: #ff7cb4 !important;
+}
+
+/* Input Focus States (#c85a71) */
+.dark input:focus, .dark textarea:focus {
+    border-color: #ff7cb4 !important;
+    box-shadow: 0 0 0 4px rgba(255, 124, 180, 0.1) !important;
+}
+
+/* About Section Dark Mode (Pink Theme) */
+.dark #about {
+    background-color: #ff7cb4 !important;
+}
+.dark #about h2,
+.dark #about h3,
+.dark #about p,
+.dark #about span,
+.dark #about div {
+    color: #121212 !important;
+}
+/* The decorative circle behind the image */
+.dark #about .bg-\[\#f4b4c4\] {
+    background-color: #1e1e1e !important;
+}
+/* "About Me" label decorative dot */
+.dark #about .before\:bg-\[\#c85a71\]::before {
+    background-color: #121212 !important;
+}
+/* Skill Tags Overlays (Floating Tags) */
+.dark #about span.bg-\[\#a63b54\] {
+    background-color: #121212 !important;
+    color: #ffffff !important; /* Force white text */
+    border: none !important;
+}
+.dark #about span.bg-\[\#c7d9b7\] {
+    background-color: #ffffff !important;
+    color: #121212 !important;
+    border: none !important;
+}
+.dark #about span.border-white {
+    border-color: #121212 !important;
+    color: #121212 !important;
+}
+
+/* --- Specific UI Matching for Hero Section based on Image --- */
+
+/* Transparent Pink Contact Button */
+.dark .nav-contact-btn {
+    background-color: transparent !important;
+    border-color: #ff7cb4 !important;
+    color: #ff7cb4 !important;
+}
+.dark .nav-contact-btn:hover {
+    background-color: #ff7cb4 !important;
+    color: #121212 !important;
+}
+
+/* Subtle Hello Box Border */
+.dark .hello-box {
+    border-color: #2a2a2a !important;
+}
+
+/* Solid Pink Hero Name Underline */
+.dark .hero-name::after {
+    background-color: #ff7cb4 !important;
+    opacity: 0.8 !important;
+}
+
+/* Hide the background circle behind the pill-shaped image */
+.dark .hero-bg-circle {
+    display: none !important;
+}
+
+/* Dark UI/UX Designer floating badge with pink text */
+.dark .dark-badge {
+    background-color: #1e1e1e !important;
+    border: 1px solid #2a2a2a !important;
+}
+.dark .dark-badge span, .dark .dark-badge i {
+    color: #ff7cb4 !important;
+}
+
+/* --- Services (Skills) Section Dark Mode --- */
+.dark .bg-\[\#f1f1f1\] {
+    background-color: #1e1e1e !important;
+    border-color: #2a2a2a !important;
+}
+.dark #services div.text-\[\#5e2736\] {
+    color: #ff7cb4 !important;
+}
+.dark #services .before\:bg-\[\#a63b54\]::before {
+    background-color: #ff7cb4 !important;
+}
+.dark #services p.text-\[\#5e2736\] {
+    color: #a1a1aa !important;
+}
+.dark #services .bg-white.text-\[\#7b0d26\] {
+    background-color: #2a2a2a !important;
+    color: #ff7cb4 !important;
+}
+.dark .hover\:border-\[\#f1b8c7\]:hover {
+    border-color: #ff7cb4 !important;
+}
+
+/* --- Projects Section Dark Mode --- */
+.dark #projects div.text-\[\#5e2736\] {
+    color: #ff7cb4 !important; /* "SELECTED WORK" Text */
+}
+.dark #projects .before\:bg-\[\#a63b54\]::before,
+.dark #projects .after\:bg-\[\#a63b54\]::after {
+    background-color: #ff7cb4 !important; /* "SELECTED WORK" Lines */
+}
+.dark .project-card .bg-\[\#a63b54\] {
+    background-color: #ff7cb4 !important; /* Image Tags */
+    color: #121212 !important;
+}
+
+/* --- Contact Section Dark Mode --- */
+.dark #contact div.text-\[\#5e2736\] {
+    color: #ff7cb4 !important; /* "Get in Touch" Label */
+}
+.dark #contact .before\:bg-\[\#a63b54\]::before {
+    background-color: #ff7cb4 !important; /* "Get in Touch" Line */
+}
+.dark #contact span.text-\[\#7b0d26\] {
+    color: #ff7cb4 !important; /* "Together" Italic Text */
+}
+.dark #contact button.bg-\[\#7b0d26\] {
+    background-color: #ff7cb4 !important; /* Send Button */
+    color: #121212 !important;
+}
+.dark #contact button:hover {
+    box-shadow: 0 10px 15px -3px rgba(255, 124, 180, 0.3) !important; /* Send Button glow */
+}
